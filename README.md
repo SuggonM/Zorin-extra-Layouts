@@ -10,12 +10,12 @@ This script currently covers **all official Zorin 16 Pro Layouts**
 ## How To Use
 Basic use:
 ```
-bash -c "$(wget https://raw.githubusercontent.com/channchetra/Zorin-extra-Layouts/main/morelayoutsinstall.sh -O -)"
+bash -c "$(wget https://raw.githubusercontent.com/SuggonM/Zorin-extra-Layouts/main/morelayoutsinstall.sh -O -)"
 ```
 
 CLI:
 ```
-git clone --depth=1 https://github.com/channchetra/Zorin-extra-Layouts.git && cd Zorin-extra-layouts
+git clone --depth=1 https://github.com/SuggonM/Zorin-extra-Layouts.git && cd Zorin-extra-layouts
 
 ./morelayoutsinstall.sh -h
 ```
@@ -33,7 +33,7 @@ When contributing (or trying to), make sure that you've tested your changes befo
 
 ## License:
 ```
-Copyright (c) 2022 Simon "channchetra" Müller
+Copyright (c) 2022 Simon "TGRush" Müller
 
 This software is provided 'as-is', without any express or implied warranty. 
 In no event will the authors be held liable for any damages arising from the
