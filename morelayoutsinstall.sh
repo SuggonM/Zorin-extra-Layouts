@@ -27,15 +27,8 @@ bigtext () {
 }
 
 restart_gnome () {
-	if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
-	echo -e "${red}Wayland won't restart GNOME by default, please logout and enable the extensions yourself using the GNOME Extensions app!${reset}"
-	elif [ "$XDG_SESSION_TYPE" == "x11" ]; then
-	echo -e "${green}restarting GNOME...${reset}"
-	busctl --user call org.gnome.Shell /org/gnome/Shell org.gnome.Shell Eval s 'Meta.restart("Restarting...")'
-	sleep 5s
-	echo -e "${green}GNOME restarted!${reset}"
-	else echo -e "${red}XDG_SESSION_TYPE isn't Wayland or X11...huh?${reset}"
-	fi
+	echo "Extension setup successful."
+	echo -e "${red}If you see an error message saying the extension does not exist, please re-login and either rerun this script or enable the said extensions yourself using the GNOME Extensions app!${reset}"
 }
 
 help () {
@@ -77,8 +70,6 @@ winclassic() {
 
 ubuntu() {
 	sudo apt install gnome-shell-extension-zorin-dash -y
-	echo -e "${green}Gnome will be restarted in 5 seconds...${reset}"
-	sleep 5s
 	restart_gnome
 	gnome-extensions disable zorin-hide-activities-move-clock@zorinos.com
 	gnome-extensions disable zorin-menu@zorinos.com
